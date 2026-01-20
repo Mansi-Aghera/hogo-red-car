@@ -37,7 +37,7 @@ export const themes = {
   backgroundGray: "#222222",
   hover: "#ED3434",
   active: "#990000",
-  backgroundBlack: "#00001a",
+  backgroundBlack: "#0f0f0f",
   textWhite: "#ffffff",
     fontPrimary: `"Oxanium", Sans-serif`
 
