@@ -5,7 +5,9 @@ import RollingButton from "./RollingButton";
 import AboutView from "./AboutView";
 import ServicesView from "./ServicesView";
 import ParallaxCarSection from "./ParallaxCarSection";
-import websiteBackground from "../assets/images/website-background.webp"; 
+// import websiteBackground from "../assets/images/website-background.webp"; 
+import websiteBackground from "../assets/images/Homepage-background.png"; 
+
 
 import { themes } from "../config/themeConfig";
 import WhyChoose from "./WhyChoose";
@@ -31,8 +33,21 @@ export default function HomeHero() {
   }}
 > */}
 
-
 <section
+  className="
+    relative w-full min-h-screen 
+    flex flex-col items-center 
+    pt-32 pb-32 
+    bg-cover bg-center bg-no-repeat
+  "
+  style={{
+    backgroundImage: `url(${websiteBackground})`,
+    backgroundColor: themes.backgroundBlack,
+  }}
+>
+
+
+{/* <section
   className="
     relative w-full min-h-screen 
     flex flex-col items-center 
@@ -42,7 +57,7 @@ export default function HomeHero() {
   style={{
     backgroundColor: themes.backgroundBlack,
   }}
->
+> */}
 
 
   {/* 🔹 LIGHT OVERLAY (BACKGROUND OPACITY DOWN) */}
