@@ -1,6 +1,6 @@
 //  black blue logo grey
 
-import car from "../assets/images/audiCar.png";
+import car from "../assets/images/AudiCar.png";
 import RollingButton from "./RollingButton";
 import AboutView from "./AboutView";
 import ServicesView from "./ServicesView";
@@ -16,8 +16,15 @@ import FAQView from "./FAQView";
 import CtaView from "./CtaView";
 import InstagramView from "./InstagramView";
 import BeforeAfterView from "./BeforeAfterView";
+import { useEffect, useState } from "react";
 
 export default function HomeHero() {
+      const [animate, setAnimate] = useState(false);
+ 
+  // 👇 Trigger animation after component mounts
+  useEffect(() => {
+    setAnimate(true);
+  }, []);
   return (
     <>
 {/* <section
@@ -71,54 +78,72 @@ export default function HomeHero() {
   {/* ↑ change 20/30/40 as per need */}
 
   {/* CONTENT (ABOVE OVERLAY) */}
-  <div
-    className="relative max-w-7xl mx-auto px-6 text-center"
-    style={{ color: themes.textWhite }}
-  >
-<h1
-  className="
-    uppercase text-center mx-auto
-    text-[clamp(28px,4.5vw,72px)]
-    leading-[1.08]
-    max-w-[14ch] md:max-w-[18ch]
-    text-balance
-  "
->
-  Ultimate Shield for Your Car's Perfection
-</h1>
-
-
-
-
-
-    <p
-      className="mt-6 max-w-xl mx-auto"
-      style={{
-        fontFamily: themes.fontPrimary,
-        fontSize: "18px",
-        fontWeight: "400",
-        color: themes.textWhite,
-        opacity: 0.8,
-      }}
-    >Explore Our Advanced Paint Protection & Window Films
-
-
-    </p>
-
-    {/* BUTTON */}
-    <div className="mt-10 flex justify-center">
-      <RollingButton text="Get Quote" />
+ <div
+      className="relative max-w-7xl mx-auto px-6 text-center"
+      style={{ color: themes.textWhite }}
+    >
+      {/* HEADING */}
+      <h1
+        className={`
+          uppercase text-center mx-auto
+          text-[clamp(28px,4.5vw,72px)]
+          leading-[1.08]
+          max-w-[14ch] md:max-w-[18ch]
+          text-balance
+          transition-all duration-700 ease-out
+          ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
+        `}
+      >
+        Ultimate Shield for Your Car's Perfection
+ 
+      </h1>
+ 
+      {/* PARAGRAPH */}
+      <p
+        className={`
+          mt-6 max-w-xl mx-auto
+          transition-all duration-700 ease-out delay-150
+          ${animate ? "opacity-80 translate-y-0" : "opacity-0 translate-y-10"}
+        `}
+        style={{
+          fontFamily: themes.fontPrimary,
+          fontSize: "18px",
+          fontWeight: "400",
+          color: themes.textWhite,
+        }}
+      >
+        Explore Our Advanced Paint Protection & Window Films
+      </p>
+ 
+      {/* BUTTON */}
+      <div
+        className={`
+          mt-10 flex justify-center
+          transition-all duration-700 ease-out delay-300
+          ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
+        `}
+      >
+        <RollingButton text="Get Quote" />
+      </div>
     </div>
-  </div>
 
   {/* CAR IMAGE */}
-  <div className="relative -mt-20 w-full flex justify-center">
-    <img
-      src={car}
-      alt="Car"
-      className="w-[90%] sm:w-[85%] md:w-[80%] max-w-6xl object-contain"
-    />
-  </div>
+  <div className="relative -mt-32 w-full flex justify-center">
+  <img
+    src={car}
+    alt="Car"
+    className="
+      w-[95%]
+      sm:w-[90%]
+      md:w-[85%]
+      lg:w-[80%]
+      max-w-[1304px]
+      h-auto
+      object-contain
+    "
+  />
+</div>
+
 </section>
 
 
