@@ -1,6 +1,6 @@
 //  black blue logo grey
 
-import car from "../assets/images/audi1.png";
+import car from "../assets/images/audiCar.png";
 import RollingButton from "./RollingButton";
 import AboutView from "./AboutView";
 import ServicesView from "./ServicesView";
@@ -84,7 +84,7 @@ export default function HomeHero() {
     text-balance
   "
 >
-  Where Every Detail Truly Matters
+  Ultimate Shield for Your Car's Perfection
 </h1>
 
 
@@ -100,8 +100,7 @@ export default function HomeHero() {
         color: themes.textWhite,
         opacity: 0.8,
       }}
-    >
-orem Ipsum is therefore always free from repetition, always free from repetition injected humour, or non-characteristic words etc.
+    >Explore Our Advanced Paint Protection & Window Films
 
 
     </p>
@@ -113,7 +112,7 @@ orem Ipsum is therefore always free from repetition, always free from repetition
   </div>
 
   {/* CAR IMAGE */}
-  <div className="relative mt-20 w-full flex justify-center">
+  <div className="relative -mt-20 w-full flex justify-center">
     <img
       src={car}
       alt="Car"
