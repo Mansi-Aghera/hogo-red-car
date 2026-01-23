@@ -78,24 +78,26 @@ export default function Gallery() {
         <div className="max-w-7xl mx-auto">
  
           {/* FILTER */}
-          <div className="flex justify-center gap-3 mb-12 flex-wrap">
-            {["all", "interior", "exterior", "facility"].map((key) => (
-              <button
-                key={key}
-                onClick={() => setActiveFilter(key)}
-                className="px-6 py-2 rounded text-sm font-medium transition"
-                style={{
-                  backgroundColor:
-                    activeFilter === key
-                      ? themes.primary
-                      : themes.backgroundBlack,
-                  color: themes.textWhite,
-                }}
-              >
-                {key.toUpperCase()}
-              </button>
-            ))}
-          </div>
+<div className="flex justify-center gap-3 mb-12 flex-wrap">
+  {["all", "interior", "exterior", "facility"].map((key) => {
+    const isActive = activeFilter === key;
+ 
+    return (
+      <RollingButton
+        key={key}
+        text={key.toUpperCase()}
+        onClick={() => setActiveFilter(key)}
+        variant="filter"
+        className="text-sm"
+        style={{
+          backgroundColor: isActive
+            ? themes.primary
+            : themes.backgroundBlack,
+        }}
+      />
+    );
+  })}
+</div>
  
           {/* GRID (KEY IS MAIN MAGIC) */}
           <div
