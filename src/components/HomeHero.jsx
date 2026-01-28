@@ -29,9 +29,10 @@ export default function HomeHero() {
     <>
 {/* <section
   className="
-    relative w-full min-h-screen 
+    relative w-full
     flex flex-col items-center 
-    pt-32 pb-32 
+    pt-24 sm:pt-32
+    pb-6 sm:pb-12
     bg-cover bg-center bg-no-repeat
   "
   style={{
@@ -42,9 +43,10 @@ export default function HomeHero() {
 
 <section
   className="
-    relative w-full min-h-screen 
+    relative w-full
     flex flex-col items-center 
-    pt-32 pb-32 
+    pt-24 sm:pt-32
+    pb-6 sm:pb-12
     bg-cover bg-center bg-no-repeat
   "
   style={{
@@ -56,9 +58,10 @@ export default function HomeHero() {
 
 {/* <section
   className="
-    relative w-full min-h-screen 
+    relative w-full
     flex flex-col items-center 
-    pt-32 pb-32 
+    pt-24 sm:pt-32
+    pb-6 sm:pb-12
     bg-cover bg-center bg-no-repeat
   "
   style={{
@@ -101,13 +104,12 @@ export default function HomeHero() {
       {/* PARAGRAPH */}
       <p
         className={`
-          mt-6 max-w-xl mx-auto
+          mt-6 max-w-xl mx-auto mt-6 max-w-xl mx-auto text-base sm:text-lg
           transition-all duration-700 ease-out delay-150
           ${animate ? "opacity-80 translate-y-0" : "opacity-0 translate-y-10"}
         `}
         style={{
           fontFamily: themes.fontPrimary,
-          fontSize: "18px",
           fontWeight: "400",
           color: themes.textWhite,
         }}
@@ -118,7 +120,7 @@ export default function HomeHero() {
       {/* BUTTON */}
       <div
         className={`
-          mt-10 flex justify-center
+          mt-6 sm:mt-10 flex justify-center
           transition-all duration-700 ease-out delay-300
           ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
         `}
@@ -128,7 +130,7 @@ export default function HomeHero() {
     </div>
 
   {/* CAR IMAGE */}
-  <div className="relative -mt-32 w-full flex justify-center">
+  <div className="relative mt-6 sm:-mt-32 w-full flex justify-center">
   <img
     src={car}
     alt="Car"
@@ -253,7 +255,7 @@ export default function HomeHero() {
 //   className="
 //     relative w-full min-h-screen 
 //     flex flex-col items-center 
-//     pt-32 pb-32 
+//     pt-32 pb-8 sm:pb-12 
 //     bg-cover bg-center bg-no-repeat
 //   "
 //   style={{
@@ -267,7 +269,7 @@ export default function HomeHero() {
 //   className="
 //     relative w-full min-h-screen 
 //     flex flex-col items-center 
-//     pt-32 pb-32 
+//     pt-32 pb-8 sm:pb-12 
 //     bg-cover bg-center bg-no-repeat
 //   "
 //   style={{
@@ -321,7 +323,7 @@ export default function HomeHero() {
 //     </p>
 
 //     {/* BUTTON */}
-//     <div className="mt-10 flex justify-center">
+//     <div className="mt-6 sm:mt-10 flex justify-center">
 //       <RollingButton text="Get Quote" />
 //     </div>
 //   </div>
