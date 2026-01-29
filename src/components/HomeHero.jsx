@@ -1,6 +1,6 @@
 //  black blue logo grey
 
-import car from "../assets/images/AudiCar.png";
+import car from "../assets/images/1.png";
 import RollingButton from "./RollingButton";
 import AboutView from "./AboutView";
 import ServicesView from "./ServicesView";
@@ -130,7 +130,7 @@ export default function HomeHero() {
     </div>
 
   {/* CAR IMAGE */}
-  <div className="relative mt-6 sm:-mt-32 w-full flex justify-center">
+  <div className="relative w-full flex justify-center mt-8">
   <img
     src={car}
     alt="Car"
