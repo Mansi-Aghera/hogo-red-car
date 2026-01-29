@@ -26,6 +26,17 @@ export default function NavbarView() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleDistributorLogin = () => {
+  // clear EVERYTHING related to admin auth
+  localStorage.clear();
+
+  // small delay to ensure storage clears
+  setTimeout(() => {
+    window.location.href = "http://localhost:5173/login";
+  }, 100);
+};
+
+
   return (
     <>
       {/* ================= NAVBAR ================= */}
@@ -72,7 +83,7 @@ export default function NavbarView() {
 
           <div className="flex items-center gap-3">
             {/* <RollingButton text="Make Appointment" /> */}
-            <RollingButton text="Distributor Login" />
+            <RollingButton  onClick={handleDistributorLogin} text="Distributor Login" />
 
 
             {/* MOBILE NAVBAR HAMBURGER */}
